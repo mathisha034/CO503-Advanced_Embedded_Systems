@@ -1,0 +1,121 @@
+/*************************************************************************************
+ * CO503 Advanced Embedded Systems
+ *
+ * Date			: 16-08-2016
+ * Author 		: Isuru Nawinne
+ * Edited by	: Mathisha Bandara
+ *
+ * Description	: Compress and convert a BMP image file into JPEG format
+ *
+ * States of Process
+ * 1.Starting The program
+ * 2.Idle State
+ * 3.Input Verification State
+ * 4.Correct Input State
+ * 5.Incorrect Input state
+ * 6.Execution State
+ * 7.Invalid input state
+ *
+ *************************************************************************************/
+
+#include "application/jpeg_encoding.h"
+#include "application/bmp_extract.h"
+#include <stdint.h>
+#include <io.h>
+#include <unistd.h>
+
+
+#define LED_BASE_01 0x08001020// INSERT BASE ADDRESS OF "led_state_out" PIO DEVICE FROM QSYS
+#define OFFSET 0x00000000
+#define NO_OF_FILES 7
+
+
+void convert_picture(const char *jtag_input);
+
+int state_led = 0;
+
+int main()
+{
+	//Start the program
+	state_led = 1;
+	IOWR_8DIRECT(LED_BASE_01,OFFSET,state_led);
+
+
+	char jtag_input[20];
+
+	// Print that welcome message. Programmers looove welcome messages! ;)
+	printf("CO503 JPEG Encoder \n\n");
+	usleep(100000); // Wait for about 0.1 seconds
+
+	while(1) {
+
+		//Idle state - waiting for inputs
+		state_led = 2;
+		IOWR_8DIRECT(LED_BASE_01,OFFSET,state_led);
+		usleep(100000); // Wait for about 0.1 seconds
+
+		printf("Input file: ");
+		scanf("%s", jtag_input); // Ask for the input BMP file
+
+		//Verifying state -  inputs verification
+		state_led = 4;
+		IOWR_8DIRECT(LED_BASE_01,OFFSET,state_led);
+		usleep(100000); // Wait for about 0.1 seconds
+
+
+		// Check if the filename ends in '.bmp'
+		if(strcmp(&jtag_input[strlen(jtag_input) - 4], ".bmp") == 0) {
+
+			//Correct type input
+			state_led = 8;
+			IOWR_8DIRECT(LED_BASE_01,OFFSET,state_led);
+			usleep(100000); // Wait for about 0.1 seconds
+
+			convert_picture(jtag_input); // See function at the bottom
+
+		}
+		else{
+			//Correct type input
+			state_led = 64;
+			IOWR_8DIRECT(LED_BASE_01,OFFSET,state_led);
+			usleep(100000); // Wait for about 0.1 seconds
+		}
+		printf("\n\n");
+	}
+
+	return 0;
+}
+
+/*
+ * Convert a BMP picture of name <jtag_input> into JPEG.
+ */
+void convert_picture(const char *jtag_input)
+{
+	char file_name[80] = "/mnt/host/files/";
+	char destination[80] = "/mnt/host/files/";
+	Bmp_data pic_data;
+
+	strcat(file_name, jtag_input);
+	strcat(destination, jtag_input);
+
+	// Replace the '.bmp' with '.jpg'
+	strcpy(&destination[strlen(destination) - 3], "jpg");
+
+	if(bmp_extract(file_name, &pic_data) == 0) {
+
+		//Execution State
+		state_led = 16;
+		IOWR_8DIRECT(LED_BASE_01,OFFSET,state_led);
+		usleep(100000); // Wait for about 0.1 seconds
+
+		// Convert to JPEG. This is where the magic happens!
+		jpeg_encode(destination, pic_data.bitmap, pic_data.header->BMPHeight, pic_data.header->BMPWidth, 90);
+	} else {
+		// An error has happened
+		//Empty/Invalid input file state
+		state_led = 128;
+		IOWR_8DIRECT(LED_BASE_01,OFFSET,state_led);
+		usleep(100000); // Wait for about 0.1 seconds
+
+	}
+}

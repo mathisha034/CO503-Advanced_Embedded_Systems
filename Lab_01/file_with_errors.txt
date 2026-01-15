@@ -1,0 +1,34 @@
+   ID value was not verified: value was not specified
+    Timestamp value was not verified: value was not specified
+Initializing CPU cache (if present)
+OK
+
+Downloading 00000000 ( 0%)
+Downloading 00003E9C (64%)
+Downloaded 16KB in 0.2s (80.0KB/s)
+
+Verifying 00000000 ( 0%)
+Verify failed between address 0x0 and 0x2867
+Leaving target processor paused
+
+
+
+Using cable "USB-Blaster [USB-0]", device 1, instance 0x00
+Pausing target processor: OK
+Reading System ID at address 0x08001030: 
+    ID value was not verified: value was not specified
+    Timestamp value was not verified: value was not specified
+Initializing CPU cache (if present)
+OK
+
+Downloading 00000000 ( 0%)
+Downloading 00003E9C (64%)
+Downloaded 16KB in 0.2s (80.0KB/s)
+
+Verifying 00000000 ( 0%)
+Verify failed between address 0x0 and 0x2867
+Leaving target processor paused
+
+
+
+
