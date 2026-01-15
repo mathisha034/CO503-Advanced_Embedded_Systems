@@ -1,0 +1,4 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.debug.ui,3.7.102.v20111129-1423_r372,"org.eclipse.debug.ui",1766426968307
+stopped,bundle,org.eclipse.mylyn.wikitext.ui,1.5.0.v20110608-1400,"org.eclipse.mylyn.wikitext.ui",1766426968307
+stopped,bundle,org.eclipse.rse.subsystems.files.dstore,2.1.201.R33x_v201109141647,"org.eclipse.rse.subsystems.files.dstore",1766426968308

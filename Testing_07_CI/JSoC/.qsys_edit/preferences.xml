@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="191" />
+   <irq preferredWidth="34" />
+   <name preferredWidth="358" />
+   <opcodeName preferredWidth="308" />
+   <description preferredWidth="296" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="170" />
+   <clocksource preferredWidth="170" />
+   <frequency preferredWidth="151" />
+  </columns>
+ </clocktable>
+ <window width="2582" height="1562" x="-11" y="-11" />
+ <library expandedCategories="Library,Project" />
+ <generation simulation="NONE" />
+</preferences>

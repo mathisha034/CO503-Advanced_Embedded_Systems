@@ -1,0 +1,56 @@
++-----------------------------------------------------------+
+| Comparison between software and custom instruction CRC32  |
++-----------------------------------------------------------+
+
+
+System specification
+--------------------
+System clock speed = 100 MHz
+Number of buffer locations = 32
+Size of each buffer = 256 bytes
+
+
+Initializing all of the buffers with pseudo-random data
+-------------------------------------------------------
+Initialization completed
+
+
+Running the software CRC
+------------------------
+Completed
+
+
+Running the optimized software CRC
+----------------------------------
+Completed
+
+
+Running the custom instruction CRC
+----------------------------------
+Completed
+
+
+Validating the CRC results from all implementations
+----------------------------------------------------
+All CRC implementations produced the same results
+
+
+Processing time for each implementation
+---------------------------------------
+Software CRC = 24 ms
+Optimized software CRC = 04 ms
+Custom instruction CRC = 07 ms
+
+
+Processing throughput for each implementation
+---------------------------------------------
+Software CRC = 1638 Mbps
+Optimized software CRC = 1820 Mbps
+Custom instruction CRC = 1638 Mbps
+
+
+Speedup ratio
+-------------
+Custom instruction CRC vs software CRC = 73
+Custom instruction CRC vs optimized software CRC = 49
+Optimized software CRC vs software CRC= 1
