@@ -1,0 +1,111 @@
+Producer starting..
+Producer sent [5] : SWT = 15.260 us , PT = 88684.120 us
+Producer sent [15] : SWT = 15.240 us , PT = 188446.660 us
+Producer sent [25] : SWT = 15.240 us , PT = 188816.720 us
+Producer sent [35] : SWT = 15.240 us , PT = 188918.020 us
+Producer sent [45] : SWT = 15.260 us , PT = 188823.020 us
+Producer sent [55] : SWT = 15.280 us , PT = 188883.480 us
+Producer sent [65] : SWT = 15.260 us , PT = 188851.440 us
+Producer sent [75] : SWT = 15.280 us , PT = 188544.020 us
+Producer sent [85] : SWT = 15.240 us , PT = 189194.940 us
+Producer sent [95] : SWT = 15.260 us , PT = 188908.480 us
+Producer sent [105] : SWT = 15.240 us , PT = 188893.780 us
+Producer sent [115] : SWT = 15.280 us , PT = 189031.780 us
+Producer sent [125] : SWT = 15.260 us , PT = 188933.400 us
+Producer sent [135] : SWT = 15.240 us , PT = 188919.000 us
+Producer sent [145] : SWT = 15.240 us , PT = 188864.820 us
+Producer sent [155] : SWT = 15.560 us , PT = 188941.140 us
+Producer sent [165] : SWT = 15.240 us , PT = 188830.880 us
+Producer sent [175] : SWT = 15.240 us , PT = 188922.520 us
+Producer sent [185] : SWT = 15.260 us , PT = 188883.640 us
+Producer sent [195] : SWT = 15.260 us , PT = 188972.240 us
+Producer sent [205] : SWT = 15.240 us , PT = 188943.080 us
+Producer sent [215] : SWT = 15.240 us , PT = 188942.320 us
+Producer sent [225] : SWT = 15.240 us , PT = 189016.860 us
+Producer sent [235] : SWT = 15.240 us , PT = 188906.780 us
+Producer sent [245] : SWT = 15.240 us , PT = 188990.000 us
+Producer sent [255] : SWT = 15.240 us , PT = 188920.020 us
+Producer sent [265] : SWT = 15.240 us , PT = 188951.940 us
+Producer sent [275] : SWT = 15.240 us , PT = 189051.840 us
+Producer sent [285] : SWT = 15.240 us , PT = 188955.220 us
+Producer sent [295] : SWT = 15.240 us , PT = 188929.860 us
+Producer sent [305] : SWT = 15.260 us , PT = 189029.400 us
+Producer sent [315] : SWT = 15.580 us , PT = 188988.160 us
+Producer sent [325] : SWT = 15.240 us , PT = 188965.260 us
+Producer sent [335] : SWT = 15.240 us , PT = 188979.200 us
+Producer sent [345] : SWT = 15.240 us , PT = 188900.080 us
+Producer sent [355] : SWT = 15.240 us , PT = 188926.840 us
+Producer sent [365] : SWT = 15.240 us , PT = 188983.780 us
+Producer sent [375] : SWT = 15.240 us , PT = 189004.300 us
+Producer sent [385] : SWT = 15.240 us , PT = 188780.960 us
+Producer sent [395] : SWT = 15.240 us , PT = 188938.420 us
+Producer sent [405] : SWT = 15.240 us , PT = 189031.000 us
+Producer sent [415] : SWT = 15.260 us , PT = 188741.580 us
+Producer sent [425] : SWT = 15.260 us , PT = 188996.020 us
+Producer sent [435] : SWT = 15.260 us , PT = 188987.160 us
+Producer sent [445] : SWT = 15.240 us , PT = 188997.940 us
+Producer sent [455] : SWT = 15.260 us , PT = 188943.980 us
+Producer sent [465] : SWT = 15.280 us , PT = 189024.380 us
+Producer sent [475] : SWT = 15.560 us , PT = 188964.280 us
+Producer sent [485] : SWT = 15.260 us , PT = 188972.700 us
+Producer sent [495] : SWT = 15.240 us , PT = 188845.760 us
+Producer finished..
+
+
+
+Consumer starting..
+Consumer succefully received [5] : SRT = 6661082.500 us, PT = 6661094.820 us
+Consumer succefully received [15] : SRT = 174906.800 us, PT = 188446.940 us
+Consumer succefully received [25] : SRT = 175723.120 us, PT = 188816.900 us
+Consumer succefully received [35] : SRT = 175827.480 us, PT = 188918.040 us
+Consumer succefully received [45] : SRT = 176089.420 us, PT = 188822.260 us
+Consumer succefully received [55] : SRT = 175864.160 us, PT = 188883.900 us
+Consumer succefully received [65] : SRT = 175713.340 us, PT = 188851.640 us
+Consumer succefully received [75] : SRT = 175363.100 us, PT = 188572.620 us
+Consumer succefully received [85] : SRT = 176516.340 us, PT = 189165.800 us
+Consumer succefully received [95] : SRT = 175664.720 us, PT = 188908.940 us
+Consumer succefully received [105] : SRT = 175847.220 us, PT = 188922.380 us
+Consumer succefully received [115] : SRT = 175853.040 us, PT = 189010.060 us
+Consumer succefully received [125] : SRT = 175796.080 us, PT = 188926.520 us
+Consumer succefully received [135] : SRT = 175761.740 us, PT = 188918.540 us
+Consumer succefully received [145] : SRT = 175691.060 us, PT = 188864.820 us
+Consumer succefully received [155] : SRT = 175761.400 us, PT = 188941.800 us
+Consumer succefully received [165] : SRT = 175680.980 us, PT = 188830.800 us
+Consumer succefully received [175] : SRT = 175763.040 us, PT = 188921.940 us
+Consumer succefully received [185] : SRT = 175734.320 us, PT = 188883.560 us
+Consumer succefully received [195] : SRT = 175793.120 us, PT = 188972.860 us
+Consumer succefully received [205] : SRT = 176079.560 us, PT = 188942.880 us
+Consumer succefully received [215] : SRT = 175747.220 us, PT = 188942.840 us
+Consumer succefully received [225] : SRT = 176291.580 us, PT = 189016.800 us
+Consumer succefully received [235] : SRT = 175795.740 us, PT = 188906.640 us
+Consumer succefully received [245] : SRT = 175724.360 us, PT = 188989.820 us
+Consumer succefully received [255] : SRT = 175734.360 us, PT = 188939.420 us
+Consumer succefully received [265] : SRT = 176143.220 us, PT = 188932.720 us
+Consumer succefully received [275] : SRT = 175783.560 us, PT = 189067.040 us
+Consumer succefully received [285] : SRT = 175834.720 us, PT = 188940.160 us
+Consumer succefully received [295] : SRT = 175816.200 us, PT = 188929.060 us
+Consumer succefully received [305] : SRT = 175968.300 us, PT = 189029.600 us
+Consumer succefully received [315] : SRT = 176253.940 us, PT = 188988.360 us
+Consumer succefully received [325] : SRT = 175642.720 us, PT = 188965.540 us
+Consumer succefully received [335] : SRT = 175736.980 us, PT = 188979.180 us
+Consumer succefully received [345] : SRT = 175587.720 us, PT = 188900.080 us
+Consumer succefully received [355] : SRT = 176144.100 us, PT = 188926.180 us
+Consumer succefully received [365] : SRT = 175912.240 us, PT = 188984.460 us
+Consumer succefully received [375] : SRT = 175627.980 us, PT = 189004.420 us
+Consumer succefully received [385] : SRT = 175592.100 us, PT = 188780.360 us
+Consumer succefully received [395] : SRT = 175864.940 us, PT = 188939.120 us
+Consumer succefully received [405] : SRT = 175824.700 us, PT = 189030.420 us
+Consumer succefully received [415] : SRT = 175663.260 us, PT = 188741.720 us
+Consumer succefully received [425] : SRT = 175825.140 us, PT = 188996.100 us
+Consumer succefully received [435] : SRT = 175716.460 us, PT = 188986.820 us
+Consumer succefully received [445] : SRT = 176215.000 us, PT = 188997.600 us
+Consumer succefully received [455] : SRT = 176238.720 us, PT = 188944.660 us
+Consumer succefully received [465] : SRT = 175786.180 us, PT = 189024.180 us
+Consumer succefully received [475] : SRT = 175767.320 us, PT = 188964.100 us
+Consumer succefully received [485] : SRT = 176198.240 us, PT = 188973.080 us
+Consumer succefully received [495] : SRT = 175707.820 us, PT = 188845.900 us
+Consumer finished..
+
+
+
+
