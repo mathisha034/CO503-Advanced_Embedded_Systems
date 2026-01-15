@@ -1,0 +1,64 @@
+// TopModule.v
+module TopModule (
+    input         clk_clk,       // Mapped to PIN_Y2 (50MHz)
+    
+    // SDRAM Clock Pin (Must match your QSF name "c1")
+    output        c1,            // Mapped to PIN_AE5
+    
+    // SDRAM Control & Data Pins
+    output [12:0] new_sdram_controller_wire_addr,
+    output [1:0]  new_sdram_controller_wire_ba,
+    output        new_sdram_controller_wire_cas_n,
+    output        new_sdram_controller_wire_cke,
+    output        new_sdram_controller_wire_cs_n,
+    inout  [31:0] new_sdram_controller_wire_dq,
+    output [3:0]  new_sdram_controller_wire_dqm,
+    output        new_sdram_controller_wire_ras_n,
+    output        new_sdram_controller_wire_we_n,
+    
+    // LED Output
+    output [7:0]  led_out_external_connection_export
+);
+
+    // Internal wires
+    wire sys_clk;      // 0 phase shift (for SoC)
+    wire sdram_clk;    // -3.6ns phase shift (for external Pin)
+    wire pll_locked;   // To keep system in reset until PLL is stable
+
+    // =========================================================
+    // 1. INSTANTIATE THE PLL
+    // =========================================================
+    sdramPLL u_pll (
+        .inclk0 (clk_clk),      // 50MHz Input
+        .c0     (sys_clk),      // Output 0: System Clock -> Goes to SoC
+        .c1     (sdram_clk),    // Output 1: Shifted Clock -> Goes to SDRAM Pin
+        .locked (pll_locked)
+    );
+
+    // Connect the internal shifted clock to the output pin "c1"
+    assign c1 = sdram_clk;
+
+    // =========================================================
+    // 2. INSTANTIATE THE SOC
+    // =========================================================
+    SoC u_soc (
+        // IMPORTANT: Drive SoC with the UN-SHIFTED sys_clk
+        .clk_clk                            (sys_clk), 
+        
+        // Hold reset until PLL is locked (Active Low Reset)
+        .reset_reset_n                      (pll_locked), 
+        
+        // Wiring ports to pins
+        .new_sdram_controller_wire_addr     (new_sdram_controller_wire_addr),
+        .new_sdram_controller_wire_ba       (new_sdram_controller_wire_ba),
+        .new_sdram_controller_wire_cas_n    (new_sdram_controller_wire_cas_n),
+        .new_sdram_controller_wire_cke      (new_sdram_controller_wire_cke),
+        .new_sdram_controller_wire_cs_n     (new_sdram_controller_wire_cs_n),
+        .new_sdram_controller_wire_dq       (new_sdram_controller_wire_dq),
+        .new_sdram_controller_wire_dqm      (new_sdram_controller_wire_dqm),
+        .new_sdram_controller_wire_ras_n    (new_sdram_controller_wire_ras_n),
+        .new_sdram_controller_wire_we_n     (new_sdram_controller_wire_we_n),
+        .led_out_external_connection_export (led_out_external_connection_export)
+    );
+
+endmodule
