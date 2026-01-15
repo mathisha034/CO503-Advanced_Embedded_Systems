@@ -1,0 +1,38 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <stdio.h>
+#include "sys/alt_timestamp.h"
+
+int main(void)
+{
+    if (alt_timestamp_start() < 0) {
+        printf("Timestamp timer NOT available!\n");
+        while (1);
+    }
+
+    alt_u64 t1 = alt_timestamp();
+    volatile int i;
+    for ( i = 0; i < 100000; i++);
+
+    alt_u64 t2 = alt_timestamp();
+
+    printf("t1 = %llu\n", t1);
+    printf("t2 = %llu\n", t2);
+    printf("cycles = %llu\n", t2 - t1);
+
+    while (1);
+}

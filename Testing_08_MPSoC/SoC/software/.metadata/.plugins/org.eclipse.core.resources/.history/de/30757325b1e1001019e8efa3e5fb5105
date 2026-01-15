@@ -1,0 +1,41 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <stdio.h>
+#include <sys/time.h>
+
+int main()
+{
+
+	struct timeval current_time;
+
+	// Get the current time
+	    gettimeofday(&current_time, NULL);
+
+	    // Seconds since Epoch (Jan 1 1970)
+	    printf("Seconds: %ld\n", current_time.tv_sec);
+
+	    // Microseconds part
+	    printf("Microseconds: %ld\n", current_time.tv_usec);
+
+	    // Total time in microseconds
+	    long long total_micros = (current_time.tv_sec * 1000000LL) + current_time.tv_usec;
+	    printf("Total Microseconds: %lld\n", total_micros);
+//	while(1){
+//		printf("Hello from Nios II from cpu0!\n");
+//	}
+  return 0;
+}
