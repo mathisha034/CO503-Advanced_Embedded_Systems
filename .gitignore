@@ -1,0 +1,26 @@
+# IDE
+.vscode/
+.metadata/
+*.launch
+
+# Eclipse
+#*.log
+#.settings/
+#.project
+#.cproject
+
+# Quartus / Qsys generated
+#db/
+# incremental_db/
+# output_files/
+# *.rpt
+# *.qpf~
+# *.qsf~
+# *.sopcinfo
+# *.qsys
+# .qsys_edit/
+
+# # Nios / BSP generated
+# software/**/Debug/
+# software/**/Release/
+# software/**/build/
